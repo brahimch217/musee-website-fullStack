@@ -1,0 +1,26 @@
+{
+  "name": "dta_web_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ibrahim cherifi from Waper-Dev",
+  "license": "ISC",
+  "dependencies": {
+    "admin-bro": "^4.0.1",
+    "admin-bro-expressjs": "^2.1.1",
+    "admin-bro-mongoose": "^0.5.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.2",
+    "mongodb": "^4.4.0",
+    "mongoose": "^6.2.3"
+  }
+}

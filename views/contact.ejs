@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>museé-de-Chlef</title>
+        <!-- normalize css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+        />
+        <!-- font awesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+        />
+    
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+        <!-- GOOGLE-FONTS SOURCE SANS PRO -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet" />
+        <!-- GOOGLE-FONTS GEMENU LIBRE -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&family=Mada:wght@400;600;700&display=swap" rel="stylesheet">
+    
+        <!-- custom utilities css -->
+        <link rel="stylesheet" href="css/utilities.css">
+        <!-- custom main css -->
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+<body>
+
+
+
+
+    <%- include( 'partials/navBar' ) %>
+
+        <!-- latest news section -->
+ 
+        <section id="contact" class="contact">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3221.26846085503!2d1.3373846146745119!3d36.160021311173104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12840e7052856583%3A0x8e57f4684036ee96!2z2YXYqtit2YEg2LnYqNivINin2YTZhdis2YrYryDZhdiy2YrYp9mG!5e0!3m2!1sen!2sdz!4v1624180594614!5m2!1sen!2sdz"
+                width="100%" height="450" style="border:0;" allowfullscreen="true" loading="lazy"></iframe>
+
+            <div class="row">
+
+                <div class="contact-info">
+
+                    <div class="box">
+                        <h3> <i class="fas fa-home"></i> address </h3>
+                        <p>Algeria<br> Chlef, <br> city kharoba.
+                        </p>
+                    </div>
+
+                    <div class="box">
+                        <h3> <i class="fas fa-envelope"></i> e-mail </h3>
+                        <p>museechlef02@gmail.com
+
+                        </p>
+                    </div>
+
+                    <div class="box">
+                        <h3> <i class="fas fa-phone"></i> phone </h3>
+                        <p>+213 27 77 75 20
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="contact-form-container">
+
+                    <form action="">
+
+                        <h3>ابقى على تواصل</h3>
+
+                        <div class="inputBox">
+                            <input type="text" placeholder="full name">
+                            <input type="email" placeholder="e-mail">
+                        </div>
+
+                        <textarea name="" id="" cols="30" rows="10" placeholder="message"></textarea>
+
+                        <input type="submit" value="message">
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- end of latest news section -->
+
+        <%- include( 'partials/footer' ) %>
+
+</body>
+<script src="js/script.js"></script>
+</html>

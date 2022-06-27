@@ -1,0 +1,451 @@
+
+    <div class="holder">
+        <!-- navbar -->
+    <%- include( 'partials/navBar' ) %>
+        <!-- end of navbar -->
+
+        <!-- header -->
+
+        <header class="header" id="header">
+            <div class="grid-item grid-item--primary ">
+                <img src="https://firebasestorage.googleapis.com/v0/b/musee-chlef02.appspot.com/o/image%2Fabout%201%20(4).png?alt=media&token=a53b4319-bc46-4e49-9af5-1e74e75cdffb " style="background: rgba(0,0,0,0.7);background-blend-mode: darken; " class=" object-fit "
+                    alt="متحف الشلف ">
+                <a href="# " class="logo ">
+                    <h1> </h1>
+                </a>
+            </div>
+            <div class="grid-item grid-item--secondary grid-item--content ">
+                <article class="article article--align-right ">
+                    <h5 class="rotate rotate--right ">تاريخ<br/>الشلف</h5>
+                </article>
+                <article class="article ">
+                    <h4><span>2005</span> <span>2022</span></h4>
+                    <h2>من نحن</h2>
+                    <p>
+
+                        المتحف العمومي الوطني عبد المجيد مزيان تحفة معمارية فنية ، بلمسات عصرية تحمل بين جدرانها ذاكرة المنطقة و تاريخها دشن سنة 2005 ، كأول هيكل ثقافي بولاية الشلف ثم أسس كمتحف جهوي مستقل بموجب المرسوم التنفيذي رقم 09-69 المؤرخ في 07 فيفري 2009 و ارتقى إلى مصف
+                        المتاحف الوطنية سنة 2012 حيث أصبح متحفا عموميا وطنيا </p>
+                </article>
+            </div>
+            <div class="grid-item grid-item--secondary ">
+                <img src="https://firebasestorage.googleapis.com/v0/b/musee-chlef02.appspot.com/o/image%2Fimg4%201.png?alt=media&token=df089f09-e3ab-4b9b-a028-a3431c281618" class="object-fit " alt="متحف الشلف ">
+            </div>
+            <div class="grid-item grid-item--tertiary ">
+                <img src="https://firebasestorage.googleapis.com/v0/b/musee-chlef02.appspot.com/o/image%2Fi.png?alt=media&token=3c99774f-9033-4721-b1db-159baae1f9d3" class="object-fit " alt="متحف الشلف ">
+            </div>
+            <div class="grid-item grid-item--tertiary grid-item--content ">
+                <article class="article ">
+                    <p> قم بتجربة زيارة افتراضية لأحد غرف المتحف <a href="vrt.html"> المزيد </a></p>
+                </article>
+            </div>
+            <div class="grid-item grid-item--tertiary ">
+                <img src="https://firebasestorage.googleapis.com/v0/b/musee-chlef02.appspot.com/o/image%2Fimg2.png?alt=media&token=0904bd69-e1a7-43f3-8143-8ecf845310ea " class="object-fit " alt="متحف الشلف ">
+            </div>
+        </header>
+        <!-- end of header -->
+
+        <!-- main content -->
+        <main>
+            <!-- top new products section -->
+            <section id="new-products" class="new-products py bg-light-grey-color-shade">
+                <div class="container">
+                    <div class="section-title text-center">
+                        <h2>الأعمال التقنية</h2>
+                        <p class="lead"></p>
+                        <div class="line"></div>
+                    </div>
+
+                    <div class="new-products-content grid">
+
+                        <% if(discover != '') { %>    
+                            <% discover.forEach(function(discover, index){ %> 
+
+
+                        <div class="new-product-item">
+                            <div class="image">
+                                <img src="<%- discover.img %>" alt="">
+                                <span class="badge bg-brown text-white text-center text-uppercase"></span>
+                            </div>
+                            <div class="info">
+                                <div class="ratings text-grey">
+                                    <i class="fas fa-star text-brown"></i>
+                                    <i class="fas fa-star text-brown"></i>
+                                    <i class="fas fa-star text-brown"></i>
+                                    <i class="fas fa-star text-brown"></i>
+                                    <i class="fas fa-star text-brown"></i>
+                                    <span></span>
+                                </div>
+                                <p class="name"><%- discover.name %></p>
+
+                            </div>
+                        </div>
+
+                        <% }) %>     
+                        <% } %> 
+
+
+                    </div>
+                </div>
+            </section>
+            <!-- end of top new products section -->
+
+            <!-- category section -->
+            <section class="category py bg-light-brown" id="category">
+                <div class="container">
+                    <div class="category-content grid">
+                        <% if(filds != '') { %> 
+                        <% filds.fildsData.forEach(function(fild, index) { %> 
+                        <div class="category-item">
+                            <img src="<%- fild.img %>">
+                            <div class="category-badge bg-white text-dark flex"><%- fild.name %></div>
+                        </div>
+                        <% }) %>     
+                        <% } %> 
+                       
+                    </div>
+                </div>
+            </section>
+            <!-- end of category section -->
+            <section>
+                <div class="wrapper" id="actvt">
+                    <div class="category-filter">
+                        <div class="container">
+                            <div class="title">
+                                <h1>مجموعات متحفية</h1>
+                            </div>
+
+                            <div class="filter-btns">
+                                <button type="button" class="filter-btn" id="all">الكل</button>
+                                <% if(category != '') { %> 
+                                    <% category.CategoriesData.forEach(function(category, index) { %> 
+                                <button type="button" class="filter-btn" id="<%- category.name %>"><%- category.name %></button>
+                                <% }) %>     
+                                <% } %> 
+                            </div>
+
+
+
+                            <div class="filter-items">
+
+
+
+
+                                <% if(artisan != '') { %> 
+                                    <% artisan.artisanData.forEach(function(artisan, index) { %> 
+
+                                <div class="filter-item all <%- artisan.Category %>">
+                                    <div class="item-img">
+                                        <img src="<%- artisan.img %>" alt="Item image">
+                                        <span class="discount"> %  <%- artisan.Safety %> السلامة</span>
+                                    </div>
+                                    <div class="item-info">
+                                        <p> <%- artisan.name %> </p>
+                                        <div>
+                                            <span class="old-price">                                                 
+                                                <%- artisan.Discreption %>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% }) %>     
+                                <% } %> 
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- featured deals section -->
+
+            <!-- end of featured deals section -->
+
+            <!-- catalog section -->
+            <section class="catalog bg-brown" id="catalog">
+                <div class="catalog-content grid text-center">
+                    <div class="catalog-left"></div>
+                    <div class="catalog-right text-white flex py">
+                        <div class="section-title">
+                            <h2>المتاحف و دورها التربوي</h2>
+                        </div>
+                        <p class="text">تعتبر المتاحف من المؤسسات التعليمية الهامة لخدمة المجتمع المحلي ومساندة المؤسسات التعليمية. وتختلف المتاحف بأنواعها فمنها الاثري و العلمي و الفني و المخصص للتاريخ الطبيعي و للأطفال. و مع إختلاف انواع المتاحف الا أنها تشترك بأهدافها
+                            وهي : جمع القطع المتحفية و صيانتها و الحفاظ عليها و إفساح المجال للباحثين و الدارسين للأستفادة منها و تثقيف الزوار من جميع اعمارهم و ثقافتهم.</p>
+                        <p class="text"></p>
+                    </div>
+                </div>
+            </section>
+            <!-- end of catalog section -->
+
+            <!-- latest news section -->
+            <section class="latest-news bg-light-grey-color-shade py" id="latest-news">
+                <div class="container">
+                    <div class="section-title text-center">
+                        <h2>النشاطات</h2>
+                        <p class="lead">تعرف على أهم نشاطات المتحف</p>
+                        <div class="line"></div>
+                    </div>
+
+                    <div class="latest-news-content grid">
+
+
+                        <% if(events != '') { %> 
+                            <% events.eventsData.forEach(function(event, index) { %> 
+
+                        <article class="latest-news-item bg-white">
+                            <div class="top">
+                                <img src="<%- event.img %>">
+                                <div class="author">
+                                    <img src="image/ath.png">
+                                </div>
+                            </div>
+                            <div class="body">
+                                <span class="date"><%- event.date %></span>
+                                <h3 class="title text-uppercase"><%- event.name %></h3>
+                            </div>
+                            <div class="bottom" k>
+                                <a href="/events" class="text-uppercase">المزيد</a>
+                            </div>
+                        </article>
+                        <% }) %>     
+                        <% } %> 
+
+                    </div>
+                </div>
+            </section>
+            <!-- end of latest news section -->
+            <!-- start timeline section -->
+            <section id=timeline>
+                <div class="title">
+                    <h1>مراحل ترميم الأثار</h1>
+                </div>
+                <p class="leader">تعرف على طرق و مراحل ترميم الأثار</p>
+                <div class="demo-card-wrapper">
+                    <div class="demo-card demo-card--step1">
+                        <div class="head">
+                            <div class="number-box">
+                                <span>01</span>
+                            </div>
+                            <h2><span class="small"></span> المعاينة</h2>
+                        </div>
+                        <div class="body">
+                            <p> تعد هذه المرحلة من أهم مراحل ترميم القطع الأثرية، فهي تسمح بمعرفة مقدار الضرر و طرق الترميم
+                            </p>
+                            <img src="https://firebasestorage.googleapis.com/v0/b/musee-chlef02.appspot.com/o/image%2Ftime1.png?alt=media&token=d553de6f-801c-4851-83e7-bea7606ef8b5" alt="تابوت">
+                        </div>
+                    </div>
+
+                    <div class="demo-card demo-card--step2">
+                        <div class="head">
+                            <div class="number-box">
+                                <span>02</span>
+                            </div>
+                            <h2><span class="small"></span> الترميم</h2>
+                        </div>
+                        <div class="body">
+                            <p>هو عملية فنية دقيقة يتم من خلالها إعــادة المــواد الأثرية إلى حالتها أو إعطائها الشكل الأقرب إلى أصلها بغير إضافات متلفة أو مزورة</p>
+                            <img src="https://firebasestorage.googleapis.com/v0/b/musee-chlef02.appspot.com/o/image%2Ftime2.png?alt=media&token=52346c93-b828-465b-8994-0b5eb56829da" alt="تابوت">
+                        </div>
+                    </div>
+
+                    <div class="demo-card demo-card--step3">
+                        <div class="head">
+                            <div class="number-box">
+                                <span>03</span>
+                            </div>
+                            <h2><span class="small"></span> الترميم</h2>
+                        </div>
+                        <div class="body">
+                            <p>يمكن القول أيضا أن عمليــة الترميم هــي عملية عـلاج للأثــر المصاب مــن التشققـات، والكسـور، التفتتات والثقوب، والإصابات الأخرى التي يمكـن أن يسببها مجمل العوامل المحيطة بهذا الأثر</p>
+                            <img src="https://firebasestorage.googleapis.com/v0/b/musee-chlef02.appspot.com/o/image%2Ftime3.png?alt=media&token=47c70ad2-dbda-4507-bae3-2960223ce86c" alt="تابوت">
+                        </div>
+                    </div>
+
+                    <div class="demo-card demo-card--step4">
+                        <div class="head">
+                            <div class="number-box">
+                                <span>04</span>
+                            </div>
+                            <h2><span class="small"></span> الترميم</h2>
+                        </div>
+                        <div class="body">
+                            <p>
+                                فالترميم لا يعني التجديدأو التجميل و لكن يهدف إلى إعادة الأثرإلى حالته الأصلية و الذي يقوم على احترام المواد الأصلية للأثر
+                            </p>
+                            <img src="https://firebasestorage.googleapis.com/v0/b/musee-chlef02.appspot.com/o/image%2Ftime4.png?alt=media&token=6ce0a607-02e9-4919-ad93-41b6b0f6886a" alt="ترميم">
+                        </div>
+                    </div>
+
+                    <div class="demo-card demo-card--step5">
+                        <div class="head">
+                            <div class="number-box">
+                                <span>05</span>
+                            </div>
+                            <h2><span class="small"></span> العرض</h2>
+                        </div>
+                        <div class="body">
+                            <p>
+                                بعد الإنتهاء من عمليات المعاينة و الترميم يتم رفع الستار عن القطعة التي تم انقاذها و عرضها للجمهور
+                            </p>
+                            <img src="https://firebasestorage.googleapis.com/v0/b/musee-chlef02.appspot.com/o/image%2Ftime5%20(1).png?alt=media&token=abbf9338-2c66-4216-a098-e445a2fc54cf" alt="تابوت">
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+
+
+            <!-- about sectio starts  -->
+
+            <section class="aboutapp" id="aboutapp">
+
+                <div class="title">
+                    <h1>تطبيقنا</h1>
+                </div>
+
+                <div class="rowapp">
+
+                    <div class="imageapp">
+                        <img src="images/about-img.png" alt="">
+                    </div>
+
+                    <div class="contentapp">
+                        <h3>تطبيق لزيارة المتحف عن بعد</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus labore perspiciatis iusto debitis, explicabo neque earum accusamus adipisci eius, nobis laboriosam, autem modi porro quisquam saepe assumenda fuga quod ipsa!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit rerum excepturi alias quas voluptatibus provident voluptatum sapiente quos enim praesentium?</p>
+                        <div class="buttonsapp">
+                            <a href="http://Trainbit.com/files/7088551484/app-release.apk"><img src="images/google-btn.png" alt=""></a>
+                            <a href="#"><img src="images/app-store-btn.png" alt=""></a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- about section ends -->
+
+
+            <!-- feedback section -->
+            <section class="feedback py bg-light-grey-color-shade" id="feedback">
+                <div class="container">
+                    <div class="section-title text-center">
+                        <h2>كلمات</h2>
+                        <p class="lead"></p>
+                        <div class="line"></div>
+                    </div>
+
+                    <div class="feedback-inner">
+                        <div class="feedback-container grid">
+                            <div class="feedback-item bg-white text-center" data-id="1">
+                                <img src="images/quote-icon-dark.png" class="quote-icon">
+                                <p class="text text-grey">"حضورك زادنا فرح وسرور، ولعيونك نفرش الارض ورد وزهور، أهلًا بضيف العز "متحف الشلف</p>
+                                <div class="client">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/musee-chlef02.appspot.com/o/image%2Fabout%201%20(4).png?alt=media&token=a53b4319-bc46-4e49-9af5-1e74e75cdffb">
+                                </div>
+                            </div>
+
+                            <div class="feedback-item bg-white text-center" data-id="2" id="feedback-display">
+                                <img src="images/quote-icon.png" class="quote-icon">
+                                <p class="text text-grey">نقدم لك من الزهور أجملها، ومن العطور أعطرها، ومن التحية أطيبها، ونشكرك على حضورك، ننتظرك بكل الحب والمودة
+                                </p>
+                                <div class="client">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/musee-chlef02.appspot.com/o/image%2Fabout%201%20(4).png?alt=media&token=a53b4319-bc46-4e49-9af5-1e74e75cdffb">
+                                </div>
+                            </div>
+
+                            <div class="feedback-item bg-white text-center" data-id="3">
+                                <img src="images/quote-icon-dark.png" class="quote-icon">
+                                <p class="text text-grey">بحضورك الطيب حضر بكفوفك وتشهد عليك ملائكة كتوفك، أهلا وسهلًا بضيف الخير</p>
+                                <div class="client">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/musee-chlef02.appspot.com/o/image%2Fabout%201%20(4).png?alt=media&token=a53b4319-bc46-4e49-9af5-1e74e75cdffb">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feedback-btns flex">
+                        <button class="feedback-btn feedback-active-btn"></button>
+                        <button class="feedback-btn"></button>
+                        <button class="feedback-btn"></button>
+                    </div>
+                </div>
+            </section>
+            <!-- end of feedback section -->
+
+            <!-- contact section -->
+
+            <section id="contact" class="contact">
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3221.26846085503!2d1.3373846146745119!3d36.160021311173104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12840e7052856583%3A0x8e57f4684036ee96!2z2YXYqtit2YEg2LnYqNivINin2YTZhdis2YrYryDZhdiy2YrYp9mG!5e0!3m2!1sen!2sdz!4v1624180594614!5m2!1sen!2sdz"
+                    width="100%" height="450" style="border:0;" allowfullscreen="true" loading="lazy"></iframe>
+
+                <div class="row">
+
+                    <div class="contact-info">
+
+                        <div class="box">
+                            <h3> <i class="fas fa-home"></i> address </h3>
+                            <p>Algeria<br> Chlef, <br> city kharoba.
+                            </p>
+                        </div>
+
+                        <div class="box">
+                            <h3> <i class="fas fa-envelope"></i> e-mail </h3>
+                            <p>museechlef02@gmail.com
+
+                            </p>
+                        </div>
+
+                        <div class="box">
+                            <h3> <i class="fas fa-phone"></i> phone </h3>
+                            <p>+213 27 77 75 20
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="contact-form-container">
+
+                        <form action="">
+
+                            <h3>ابقى على تواصل</h3>
+
+                            <div class="inputBox">
+                                <input type="text" placeholder="full name">
+                                <input type="email" placeholder="e-mail">
+                            </div>
+
+                            <textarea name="" id="" cols="30" rows="10" placeholder="message"></textarea>
+
+                            <input type="submit" value="message">
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </section>
+            <!-- end of contact section -->
+        </main>
+        <!-- end of main content -->
+
+        <!-- footer -->
+        <%- include( 'partials/footer' ) %>
+        <!-- end of footer -->
+    </div>
+
+
+
+
+
+    <!-- custom js -->
+    <script src="js/script.js"></script>
+
+
